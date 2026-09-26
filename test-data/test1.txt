@@ -1,0 +1,19 @@
+SYSTEM ARCHITECTURE MANUAL: THE OMEGA DISTRIBUTED ECOSYSTEM
+
+SECTION 1: THE INGESTION TIER
+The Omega Ecosystem processes enterprise telemetry through a primary gateway known as Project Aurora. Project Aurora receives inbound REST traffic, validates payloads using Pydantic schemas, and forwards raw events directly to the Pulsar Event Bus. The Pulsar Event Bus acts as an asynchronous messaging bridge, connecting Project Aurora to the Core Processing Cluster. To prevent memory bottlenecks under heavy load, the Pulsar Event Bus utilizes an adaptive queueing policy called Backpressure Flow Control (BFC).
+
+SECTION 2: CORE PROCESSING & ANALYTICS
+The Core Processing Cluster consists of two execution engines: Engine Alpha and Engine Beta. 
+Engine Alpha is optimized for real-time mathematical operations and executes high-speed matrix multiplications using NumPy. Engine Alpha relies on an in-memory caching system named Redis-X. If Redis-X experiences a cache miss, Engine Alpha queries the primary database, MongoDB Atlas, causing a temporary latency spike of 250 milliseconds.
+
+Engine Beta is designed for batch analytics and Knowledge Graph construction. Engine Beta reads unstructured transaction logs directly from MongoDB Atlas and extracts structural triples. These triples are immediately ingested into NetworkX, a specialized directed graph framework. NetworkX calculates PageRank Centrality across all entity nodes to determine structural importance. Nodes that achieve a PageRank score greater than 0.15 are automatically promoted to ChromaDB as high-priority dense vectors.
+
+SECTION 3: FAILOVER & SAFETY PROTOCOLS
+The system safety is governed by an automated watchdog known as Guardrail-Zero. Guardrail-Zero constantly monitors the operational state of Engine Alpha and Engine Beta. 
+If Redis-X encounters a memory overflow, Engine Alpha suffers cache degradation. When cache degradation occurs, Guardrail-Zero detects the latency spike in MongoDB Atlas and immediately triggers an emergency protocol known as Circuit Breaker Delta. 
+
+When Circuit Breaker Delta is active, it forces the Pulsar Event Bus to switch from Backpressure Flow Control (BFC) to Hard Drop Mode. Hard Drop Mode terminates all non-essential inbound requests coming from Project Aurora. Consequently, if Project Aurora fails to receive acknowledgments from the Pulsar Event Bus, Project Aurora initiates an automated rollback of active user sessions to protect data consistency.
+
+SECTION 4: GOVERNANCE & METRICS
+The complete health status of the Omega Ecosystem is streamed to an observability dashboard managed by LangSmith. LangSmith tracks execution trace paths, measuring the exact latency incurred when Circuit Breaker Delta alters the behavior of Project Aurora.

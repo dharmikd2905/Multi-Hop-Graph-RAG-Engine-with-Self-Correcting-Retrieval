@@ -1,0 +1,268 @@
+[
+  {
+    "id": "Q1",
+    "question": "How does Component A indirectly affect the metrics freshness of Component C in the microservices architecture?",
+    "expected_chunks": [
+      "doc1_microservices_1_53f89f42",
+      "doc1_microservices_2_3512b0ff"
+    ],
+    "primary_target": "doc1_microservices_1_53f89f42",
+    "vector_top5": [
+      "doc1_microservices_2_3512b0ff",
+      "doc1_microservices_0_3386f4da",
+      "doc1_microservices_1_53f89f42",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_0_e08175e7"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc1_microservices_2_3512b0ff",
+      "doc1_microservices_0_3386f4da",
+      "doc1_microservices_1_53f89f42",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_0_e08175e7"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [],
+    "visited_entities_count": 0,
+    "reasoning": "Component A (API Gateway) -> Auth Service -> Message Queue (Component B) -> Analytics Pipeline (Component C). Chunk 1 contains Component C details without mentioning Component A."
+  },
+  {
+    "id": "Q2",
+    "question": "What cascade of events occurs when Redis-X experiences a memory overflow in the Omega Ecosystem?",
+    "expected_chunks": [
+      "doc2_omega_3_1dcece1e",
+      "doc2_omega_4_8e11ec97"
+    ],
+    "primary_target": "doc2_omega_4_8e11ec97",
+    "vector_top5": [
+      "doc2_omega_3_1dcece1e",
+      "doc2_omega_0_e08175e7",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_4_8e11ec97",
+      "doc1_microservices_0_3386f4da"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc2_omega_3_1dcece1e",
+      "doc2_omega_0_e08175e7",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_4_8e11ec97",
+      "doc1_microservices_0_3386f4da"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [
+      "omega ecosystem"
+    ],
+    "visited_entities_count": 2,
+    "reasoning": "Redis-X overflow -> Engine Alpha cache degradation -> MongoDB Atlas latency spike -> Guardrail-Zero -> Circuit Breaker Delta -> Pulsar Event Bus Hard Drop Mode -> Project Aurora session rollback."
+  },
+  {
+    "id": "Q3",
+    "question": "How does a failure in Engine Alpha's caching layer lead to user session rollbacks in Project Aurora?",
+    "expected_chunks": [
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_3_1dcece1e",
+      "doc2_omega_4_8e11ec97"
+    ],
+    "primary_target": "doc2_omega_4_8e11ec97",
+    "vector_top5": [
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_3_1dcece1e",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_0_e08175e7",
+      "doc1_microservices_2_3512b0ff"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_3_1dcece1e",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_0_e08175e7",
+      "doc1_microservices_2_3512b0ff"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [
+      "project aurora"
+    ],
+    "visited_entities_count": 7,
+    "reasoning": "Engine Alpha (Redis-X) -> Guardrail-Zero -> Circuit Breaker Delta -> Pulsar Hard Drop -> Project Aurora session rollback. Chunk 4 has Project Aurora rollback details."
+  },
+  {
+    "id": "Q4",
+    "question": "Which reporting system relies on metrics derived from user login events published to Kafka?",
+    "expected_chunks": [
+      "doc1_microservices_0_3386f4da",
+      "doc1_microservices_1_53f89f42"
+    ],
+    "primary_target": "doc1_microservices_1_53f89f42",
+    "vector_top5": [
+      "doc1_microservices_1_53f89f42",
+      "doc1_microservices_2_3512b0ff",
+      "doc1_microservices_0_3386f4da",
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_2_f678b2f8"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc1_microservices_1_53f89f42",
+      "doc1_microservices_2_3512b0ff",
+      "doc1_microservices_0_3386f4da",
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_2_f678b2f8"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [
+      "kafka"
+    ],
+    "visited_entities_count": 5,
+    "reasoning": "Login events -> Auth Service -> Message Queue (Kafka) [Chunk 0] -> Analytics Pipeline -> Data Warehouse -> Reporting Service [Chunk 1]."
+  },
+  {
+    "id": "Q5",
+    "question": "How are entities scored by PageRank in NetworkX eventually stored in ChromaDB?",
+    "expected_chunks": [
+      "doc2_omega_2_f678b2f8"
+    ],
+    "primary_target": "doc2_omega_2_f678b2f8",
+    "vector_top5": [
+      "doc2_omega_2_f678b2f8",
+      "doc1_microservices_1_53f89f42",
+      "doc1_microservices_0_3386f4da",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_0_e08175e7"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc2_omega_2_f678b2f8",
+      "doc1_microservices_1_53f89f42",
+      "doc1_microservices_0_3386f4da",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_0_e08175e7"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [
+      "chromadb",
+      "networkx"
+    ],
+    "visited_entities_count": 7,
+    "reasoning": "Engine Beta -> transaction logs -> NetworkX -> PageRank > 0.15 -> promoted to ChromaDB as dense vectors."
+  },
+  {
+    "id": "Q6",
+    "question": "What monitoring platform measures the latency impact on Project Aurora when Circuit Breaker Delta is active?",
+    "expected_chunks": [
+      "doc2_omega_4_8e11ec97"
+    ],
+    "primary_target": "doc2_omega_4_8e11ec97",
+    "vector_top5": [
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_0_e08175e7",
+      "doc2_omega_3_1dcece1e",
+      "doc1_microservices_2_3512b0ff",
+      "doc2_omega_1_4b83c790"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_0_e08175e7",
+      "doc2_omega_3_1dcece1e",
+      "doc1_microservices_2_3512b0ff",
+      "doc2_omega_1_4b83c790"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [
+      "project aurora"
+    ],
+    "visited_entities_count": 7,
+    "reasoning": "Circuit Breaker Delta -> Project Aurora -> Observability Dashboard -> LangSmith trace paths."
+  },
+  {
+    "id": "Q7",
+    "question": "If the Auth Service becomes unavailable, how does the API Gateway maintain operations, and what happens to downstream analytics?",
+    "expected_chunks": [
+      "doc1_microservices_0_3386f4da",
+      "doc1_microservices_1_53f89f42"
+    ],
+    "primary_target": "doc1_microservices_0_3386f4da",
+    "vector_top5": [
+      "doc1_microservices_2_3512b0ff",
+      "doc1_microservices_0_3386f4da",
+      "doc2_omega_4_8e11ec97",
+      "doc1_microservices_1_53f89f42",
+      "doc2_omega_0_e08175e7"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc1_microservices_2_3512b0ff",
+      "doc1_microservices_0_3386f4da",
+      "doc1_microservices_1_53f89f42",
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_0_e08175e7"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [
+      "api gateway",
+      "auth service"
+    ],
+    "visited_entities_count": 9,
+    "reasoning": "Auth Service unavailable -> API Gateway fallback to cached tokens (5 min) -> delayed login events -> Analytics Pipeline impact."
+  },
+  {
+    "id": "Q8",
+    "question": "What mechanism connects Project Aurora to the execution engines, and how is flow controlled under heavy load?",
+    "expected_chunks": [
+      "doc2_omega_0_e08175e7"
+    ],
+    "primary_target": "doc2_omega_0_e08175e7",
+    "vector_top5": [
+      "doc2_omega_0_e08175e7",
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_3_1dcece1e",
+      "doc1_microservices_0_3386f4da"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc2_omega_0_e08175e7",
+      "doc2_omega_4_8e11ec97",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_3_1dcece1e",
+      "doc1_microservices_0_3386f4da"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [
+      "project aurora"
+    ],
+    "visited_entities_count": 7,
+    "reasoning": "Project Aurora -> Pulsar Event Bus -> Core Processing Cluster (Engine Alpha/Beta), with Backpressure Flow Control (BFC)."
+  },
+  {
+    "id": "Q9",
+    "question": "How does data flow from unstructured transaction logs to the primary database and graph processing engines in Omega?",
+    "expected_chunks": [
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_2_f678b2f8"
+    ],
+    "primary_target": "doc2_omega_2_f678b2f8",
+    "vector_top5": [
+      "doc2_omega_2_f678b2f8",
+      "doc1_microservices_1_53f89f42",
+      "doc2_omega_0_e08175e7",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_4_8e11ec97"
+    ],
+    "vector_hit": true,
+    "hybrid_top5": [
+      "doc2_omega_2_f678b2f8",
+      "doc1_microservices_1_53f89f42",
+      "doc2_omega_0_e08175e7",
+      "doc2_omega_1_4b83c790",
+      "doc2_omega_4_8e11ec97"
+    ],
+    "hybrid_hit": true,
+    "seed_nodes": [],
+    "visited_entities_count": 0,
+    "reasoning": "MongoDB Atlas -> Engine Beta reads logs -> extracts triples -> NetworkX directed graph."
+  }
+]

@@ -1,0 +1,12 @@
+.venv/
+LC_env/
+__pycache__/
+*.pyc
+.env
+data/
+data_eval/
+data_eval_harness/
+scratch/
+.pytest_cache/
+*.egg-info/
+.DS_Store
