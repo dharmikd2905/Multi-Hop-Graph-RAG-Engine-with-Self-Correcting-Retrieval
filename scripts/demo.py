@@ -14,6 +14,8 @@ import httpx
 API_BASE = "http://localhost:8000"
 SAMPLE_DOC = Path(__file__).resolve().parents[1] / "sample_data" / "microservices_architecture.md"
 
+sys.stdout.reconfigure(encoding="utf-8")
+
 
 def main() -> None:
     text = SAMPLE_DOC.read_text()
